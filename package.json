@@ -1,0 +1,32 @@
+{
+  "name": "react-sinppets",
+  "displayName": "react sinppets",
+  "description": "A collection of different react sinppets:",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.86.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.code-snippets"
+    },
+    {
+        "language": "typescript",
+        "path": "./snippets/snippets.code-snippets"
+    },
+    {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.code-snippets"
+    },
+    {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.code-snippets"
+    }
+    ]
+  }
+}

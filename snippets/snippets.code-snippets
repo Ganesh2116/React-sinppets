@@ -1,0 +1,73 @@
+{
+  "Print to console": {
+    "prefix": "cl",
+    "body": ["console log('$0');"],
+    "description": "Log output to console"
+  },
+  "Print string to console": {
+    "prefix": "cls",
+    "body": ["console log($0);"],
+    "description": "Log string to console"
+  },
+  "Print section to console": {
+    "prefix": "clc",
+    "body": ["console.${1|log,table,error,count,info|}('$0');"],
+    "description": "Log section to console"
+  },
+  "Functional component": {
+    "prefix": "fc",
+    "body": [
+      "const ${1:ComponentName} = () => {",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t${0}",
+      "\t\t</>",
+      "\t)",
+      "\t};"
+    ],
+    "description": "Makes an functional components no exports no props"
+  },
+  "Functional component props": {
+    "prefix": "fcp",
+    "body": [
+      "const ${1:ComponentName} = (${2:props}) => {",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t${0}",
+      "\t\t</>",
+      "\t)",
+      "\t};"
+    ],
+    "description": "Makes an functional components no exports which takes props"
+  },
+  "Import UseState functional component": {
+    "prefix": "us",
+    "body": [
+      "import React from 'UseState';\n",
+      "const ${1:ComponentName} = (${2:props}) => {",
+      "const [${3:use},${4:setUse}] = useState(0)",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t${0}",
+      "\t\t</>",
+      "\t)",
+      "\t};"
+    ],
+    "description": "Makes an UseState functional components no exports defalut values here"
+  },
+  "Import React, export arrow functional component": {
+    "prefix": "race",
+    "body": [
+      "import React from 'react';\n",
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
+      "\treturn(",
+      "\t\t<>",
+      "\t\t\t$0",
+      "\t\t</>",
+      "\t)",
+      "}",
+      "export default ${1:${TM_FILENAME_BASE}};"
+    ],
+    "description": "imports React from react and creates an arrow functional component"
+  }
+}
